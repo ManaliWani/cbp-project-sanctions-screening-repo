@@ -1,0 +1,57 @@
+
+<div class="example-container">
+  <mat-card class="custom">
+      <mat-tab-group>
+          <mat-tab label="Login"></mat-tab>
+          <mat-tab label="SignUp" id="signup"></mat-tab>
+      </mat-tab-group>
+        <br><br>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+<br><br>
+
+    <mat-form-field>
+    <input matInput placeholder="Enter your Password" [formControl]="password" required>
+    <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+  </mat-form-field><br><br>
+  <mat-checkbox>Remember Me</mat-checkbox>
+
+  <a mat-flat-button routerLink="." style="color: mediumblue">Forgot password?</a><br><br>
+  <button mat-raised-button color="primary"> SUBMIT </button>
+  </mat-card>
+  
+</div>
+
+<div class="example-container" id="signup">
+    <mat-card class="custom">
+        <mat-tab-group>
+            <mat-tab label="Login"></mat-tab>
+            <mat-tab label="SignUp" class="signup"></mat-tab>
+        </mat-tab-group>
+          <br><br>
+  
+    <mat-form-field>
+      <input matInput placeholder="Enter your email" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+  
+  <br><br>
+  
+      <mat-form-field>
+      <input matInput placeholder="Enter your Password" [formControl]="password" required>
+      <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+    </mat-form-field><br><br>
+    <mat-checkbox>Remember Me</mat-checkbox>
+  
+    <a mat-flat-button routerLink="." style="color: mediumblue">Forgot password?</a><br><br>
+    <button mat-raised-button color="primary"> SUBMIT </button>
+    </mat-card>
+    
+  </div>
+
+
+  
